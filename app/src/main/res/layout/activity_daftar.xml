@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Biru4"
+    tools:context=".Ui.Daftar.DaftarActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="45dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imgbawah"
+        android:padding="25dp"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:src="@drawable/logo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GrihaHub"
+            android:textColor="@color/Biru1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solusi Layanan Rumah Tepat \n untuk Kehidupan yang Padat"
+            android:textColor="@color/Biru1"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Buat Akun Baru Anda"
+            android:textColor="@color/Biru1"
+            android:fontFamily="@font/poppins_bold"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"/>
+
+        <EditText
+            android:id="@+id/EdNama"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Nama User"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/namem"
+            android:layout_marginTop="25dp"
+            android:inputType="text"
+            android:textColorHint="@color/Biru1"/>
+        <EditText
+            android:id="@+id/EdEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email User"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/emailm"
+            android:layout_marginTop="5dp"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/Biru1"/>
+        <EditText
+            android:id="@+id/EdPhone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Telpon User"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/phonem"
+            android:layout_marginTop="5dp"
+            android:textColorHint="@color/Biru1"/>
+        <EditText
+            android:id="@+id/EdPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/lockm"
+            android:layout_marginTop="5dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/Biru1"/>
+        <EditText
+            android:id="@+id/EdKnfPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Konfirmasi Password"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/lockm"
+            android:layout_marginTop="5dp"
+            android:inputType="text"
+            android:textColorHint="@color/Biru1"/>
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnDaftar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btnkuning"
+        android:layout_marginTop="20dp"
+        android:text="Daftar"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="@color/Biru1"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="60dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginEnd="56dp"
+        android:textAllCaps="false"/>
+    <ImageView
+        android:id="@+id/imgbawah"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ellipsebawah"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Biru4"
+    tools:context=".Ui.Layanan.Elektronik.ElektronikActivity">
+
+    <ImageView
+        android:id="@+id/BtnBack"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:src="@drawable/back"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:elevation="5dp"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/ellipseatas"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="20dp"
+            android:padding="23dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Layanan Perbaikan \nAlat Elektronik"
+                android:textColor="@color/Biru1"
+                android:fontFamily="@font/poppins_bold"
+                android:textSize="20sp"
+                android:gravity="center"/>
+            <ImageView
+                android:layout_width="214dp"
+                android:layout_height="152dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:src="@drawable/bnrelektronik"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/BtnTv"
+                    android:layout_width="124dp"
+                    android:layout_height="107dp"
+                    android:background="@drawable/cardbiru1"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:src="@drawable/television_1"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Televisi "
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/White"
+                            android:fontFamily="@font/poppins_bold"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/BtnWashing"
+                    android:layout_width="124dp"
+                    android:layout_height="107dp"
+                    android:background="@drawable/cardbiru1"
+                    android:layout_marginStart="35dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:src="@drawable/washing"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Mesin Cuci "
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/White"
+                            android:fontFamily="@font/poppins_bold"/>
+                    </LinearLayout>
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:id="@+id/BtnAc"
+                    android:layout_width="124dp"
+                    android:layout_height="107dp"
+                    android:background="@drawable/cardbiru1"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:src="@drawable/ac"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="AC"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/White"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/BtnCctv"
+                    android:layout_width="124dp"
+                    android:layout_height="107dp"
+                    android:background="@drawable/cardbiru1"
+                    android:layout_marginStart="35dp"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="37dp"
+                            android:src="@drawable/cctv"
+                            android:layout_marginTop="10dp"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="CCTV"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:textColor="@color/White"
+                            android:fontFamily="@font/poppins_bold"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

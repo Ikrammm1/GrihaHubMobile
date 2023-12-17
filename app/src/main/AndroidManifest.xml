@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.grihahub">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/logo"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".Ui.CustomDialog"></activity>
+        <activity android:name=".Ui.Pembayaran.BerhasilActivity" />
+        <activity android:name=".Ui.Pembayaran.PembayaranActivity" />
+        <activity android:name=".Ui.Layanan.PilihTanggal" />
+        <activity android:name=".Adapter.CustomSpinnerAdapter" />
+        <activity android:name=".Adapter.AdapterJenis" />
+        <activity android:name=".Ui.Layanan.PilihJenisActivity" />
+        <activity android:name=".Ui.Layanan.Kendaraan.KendaraanActivity" />
+        <activity android:name=".Ui.Layanan.Elektronik.ElektronikActivity" />
+        <activity android:name=".Ui.Layanan.Kebersihan.KebersihanActivity" />
+        <activity android:name=".Adapter.AdapterPesanan" />
+        <activity android:name=".Ui.Dashboard.Dashboard" />
+        <activity android:name=".Ui.Login.LoginActivity" />
+        <activity android:name=".Ui.Daftar.DaftarActivity" />
+        <activity android:name=".Ui.Landing.Landing" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
+    </application>
+
+</manifest>

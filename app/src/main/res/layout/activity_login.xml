@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/Biru4"
+    tools:context=".Ui.Login.LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="99dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/imgbawah"
+        android:gravity="center">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="136dp"
+            android:src="@drawable/logo"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="GrihaHub"
+            android:textColor="@color/Biru1"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/poppins_bold"
+            android:gravity="center"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Solusi Layanan Rumah Tepat \n untuk Kehidupan yang Padat"
+            android:textColor="@color/Biru1"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_medium"
+            android:gravity="center"/>
+
+
+        <EditText
+            android:id="@+id/EdEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email User"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/emailm"
+            android:layout_marginTop="35dp"
+            android:layout_marginStart="71dp"
+            android:layout_marginEnd="71dp"
+            android:inputType="textEmailAddress"
+            android:textColorHint="@color/Biru1"/>
+        <EditText
+            android:id="@+id/EdPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Kata Sandi"
+            android:textSize="12sp"
+            android:paddingTop="10dp"
+            android:paddingBottom="15dp"
+            android:drawablePadding="10dp"
+            android:drawableLeft="@drawable/lockm"
+            android:layout_marginStart="71dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginTop="10dp"
+            android:inputType="textPassword"
+            android:textColorHint="@color/Biru1"/>
+
+        <TextView
+            android:id="@+id/LupaPass"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lupa Kata Sandi?"
+            android:textColor="@color/Biru1"
+            android:fontFamily="@font/poppins_medium"
+            android:textSize="13sp"
+            android:gravity="end"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="71dp"
+            android:layout_marginStart="71dp"/>
+
+        <Button
+            android:id="@+id/btnMasuk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnkuning"
+            android:layout_marginTop="40dp"
+            android:text="Masuk"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:fontFamily="@font/poppins_medium"
+            android:textColor="@color/Biru1"
+            android:layout_marginStart="71dp"
+            android:layout_marginEnd="71dp"
+            android:textAllCaps="false"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@drawable/driver"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="50dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btnkuning"
+            android:layout_marginTop="-50dp"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/Biru1"
+                android:fontFamily="@font/poppins_bold"
+                android:text="Atau"/>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnGoogle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btnwhite"
+        android:layout_marginTop="20dp"
+        android:text="Masuk Dengan Google"
+        android:textSize="12sp"
+        android:textColor="@color/Black"
+        android:fontFamily="@font/poppins_medium"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="71dp"
+        android:layout_marginEnd="71dp"
+        android:paddingStart="35dp"
+        android:paddingEnd="35dp"
+        android:drawableLeft="@drawable/google2"
+        android:textAllCaps="false"/>
+    <ImageView
+        android:id="@+id/imgbawah"
+        android:layout_width="match_parent"
+        android:layout_height="98dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:background="@drawable/ellipsebawah"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
