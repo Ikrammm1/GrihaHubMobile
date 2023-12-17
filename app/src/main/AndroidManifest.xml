@@ -9,7 +9,8 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Ui.CustomDialog"></activity>
+        <activity android:name=".Ui.Layanan.CuciKasurActivity"></activity>
+        <activity android:name=".Ui.CustomDialog" />
         <activity android:name=".Ui.Pembayaran.BerhasilActivity" />
         <activity android:name=".Ui.Pembayaran.PembayaranActivity" />
         <activity android:name=".Ui.Layanan.PilihTanggal" />
