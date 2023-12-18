@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/BtnBack"
-        android:layout_width="26dp"
-        android:layout_height="26dp"
+        android:layout_width="11dp"
+        android:layout_height="22dp"
         android:src="@drawable/back"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"

@@ -11,7 +11,9 @@ import com.project.grihahub.R
 class PembayaranActivity : AppCompatActivity() {
 
     lateinit var BtnBayar : LinearLayout
-    lateinit var Total : TextView
+    lateinit var TxtTotal : TextView
+    private val Total by lazy { intent.getStringExtra("Total") }
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,7 +25,8 @@ class PembayaranActivity : AppCompatActivity() {
         }
 
         BtnBayar = findViewById(R.id.BtnBayar)
-        Total = findViewById(R.id.TxtTotal)
+        TxtTotal = findViewById(R.id.TxtTotal)
+        TxtTotal.text = "Rp.${Total.toString()}"
 
         BtnBayar.setOnClickListener {
             startActivity(Intent(this, BerhasilActivity::class.java))

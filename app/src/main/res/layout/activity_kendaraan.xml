@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/Biru4"
     tools:context=".Ui.Layanan.Kendaraan.KendaraanActivity">
 
     <ImageView
         android:id="@+id/BtnBack"
-        android:layout_width="36dp"
-        android:layout_height="36dp"
+        android:layout_width="11dp"
+        android:layout_height="22dp"
         android:src="@drawable/back"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
