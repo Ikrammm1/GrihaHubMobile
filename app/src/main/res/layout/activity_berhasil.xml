@@ -50,7 +50,7 @@
             android:layout_height="wrap_content"
             android:textColor="@color/Biru1"
             android:textSize="20dp"
-            android:text="Halaman Utama"
+            android:text="Lihat Pesanan"
             android:textStyle="bold"
             android:fontFamily="@font/poppins_bold"
             android:gravity="center"/>
