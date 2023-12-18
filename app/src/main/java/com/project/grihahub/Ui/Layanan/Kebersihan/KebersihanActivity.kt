@@ -6,7 +6,6 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import com.project.grihahub.R
-import com.project.grihahub.Ui.Layanan.CuciKasurActivity
 import com.project.grihahub.Ui.Layanan.PilihJenisActivity
 
 class KebersihanActivity : AppCompatActivity() {
@@ -43,7 +42,8 @@ class KebersihanActivity : AppCompatActivity() {
                 .putExtra("title", "Cuci Sofa" ))
         }
         BtnBed.setOnClickListener {
-            startActivity(Intent(this, CuciKasurActivity::class.java))
+            startActivity(Intent(this, PilihJenisActivity::class.java)
+                .putExtra("title", "Cuci Kasur" ))
         }
     }
 }

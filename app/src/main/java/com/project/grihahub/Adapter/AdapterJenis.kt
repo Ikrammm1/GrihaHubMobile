@@ -15,8 +15,14 @@ import com.project.grihahub.Model.ModelLayanan
 import com.project.grihahub.Model.ModelPesanan
 import com.project.grihahub.R
 import kotlinx.android.synthetic.main.activity_pilih_jenis.view.*
+import java.math.BigDecimal
 
-class AdapterJenis(private val context: Context, private val itemList: List<ModelLayanan>) : RecyclerView.Adapter<AdapterJenis.ViewHolder>() {
+class AdapterJenis(
+    private val context: Context,
+    private val itemList: List<ModelLayanan>
+) : RecyclerView.Adapter<AdapterJenis.ViewHolder>() {
+    var onItemClick: ((position: Int, newQty: Int, newHarga : BigDecimal) -> Unit)? = null
+    var totalHarga: Double = 0.0
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val txtJenis: TextView = itemView.findViewById(R.id.TxtJenis)
@@ -28,6 +34,8 @@ class AdapterJenis(private val context: Context, private val itemList: List<Mode
 
     }
 
+
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.adapter_jenis, parent, false)
         val Qty : String
@@ -37,29 +45,45 @@ class AdapterJenis(private val context: Context, private val itemList: List<Mode
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val currentItem = itemList[position]
         holder.txtJenis.text = currentItem.jenis
-        holder.txtHarga.text = currentItem.harga
+        holder.txtHarga.text = "Rp.${currentItem.harga}"
         holder.txtQty.text = currentItem.qty.toString()
         // Dapatkan resource ID dari nama gambar
         val imageResourceId = getImageResourceId(currentItem.gambar)
 
         // Set gambar menggunakan ID resource
         holder.gambar.setImageResource(imageResourceId)
-        Log.d("gambar", currentItem.gambar)
-        Log.d("resource", imageResourceId.toString())
 
 
         holder.btnMinus.setOnClickListener {
-            if (currentItem.qty != 0){
-                val newqty = (currentItem.qty - 1)
-                holder.txtQty.text = newqty.toString()
+            if (currentItem.qty > 0) {
+                currentItem.qty--
+                notifyItemChanged(position)
+                val newHarga = calculateHarga(currentItem)
+                updateTotalHarga()
+                onItemClick?.invoke(position, currentItem.qty,newHarga.toBigDecimal())
             }
 
         }
         holder.btnPlus.setOnClickListener {
-            val newqty = (currentItem.qty + 1)
-            holder.txtQty.text = newqty.toString()
+            currentItem.qty++
+            notifyItemChanged(position)
+            val newHarga = calculateHarga(currentItem)
+            updateTotalHarga()
+            onItemClick?.invoke(position, currentItem.qty,newHarga.toBigDecimal())
+
         }
 
+    }
+
+    private fun calculateHarga(item: ModelLayanan): Double {
+        return item.harga.toDouble() * item.qty
+    }
+
+    private fun updateTotalHarga() {
+        totalHarga = 0.0
+        for (item in itemList) {
+            totalHarga += calculateHarga(item)
+        }
     }
 
     override fun getItemCount(): Int {
