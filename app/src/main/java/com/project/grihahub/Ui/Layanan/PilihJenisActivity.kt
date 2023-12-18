@@ -55,8 +55,8 @@ class PilihJenisActivity : AppCompatActivity(){
 
         }else if (Judul == "Cuci Sofa"){
             ItemList = listOf(
-                ModelLayanan("Deep Clean Sofa  kecil" ,150000, 0, "sofa2"),
-                ModelLayanan("Deep Clean Sofa besar", 200000, 0,"sofa2")
+                ModelLayanan("Deep Clean \nSofa  kecil" ,150000, 0, "sofa2"),
+                ModelLayanan("Deep Clean \nSofa besar", 200000, 0,"sofa2")
             )
         }else if (Judul == "Cuci Kasur"){
             ItemList = listOf(

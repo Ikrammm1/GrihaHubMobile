@@ -32,13 +32,13 @@ class Dashboard : AppCompatActivity() {
         super.onCreate(savedInstanceState)
        binding = ActivityDashBoardBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        replaceFragment(BerandaFragment())
+        replaceFragment(BerandaFragment(), "BerandaFragment")
 
         binding.nav.setOnNavigationItemSelectedListener {
           when(it.itemId){
-              R.id.BtnBeranda -> replaceFragment(BerandaFragment())
-              R.id.BtnPesanan -> replaceFragment(PesananFragment())
-              R.id.BtnProfile -> replaceFragment(ProfileFragment())
+              R.id.BtnBeranda -> replaceFragment(BerandaFragment(), "BerandaFragment")
+              R.id.BtnPesanan -> replaceFragment(PesananFragment(),"PesananFragment")
+              R.id.BtnProfile -> replaceFragment(ProfileFragment(),"ProfileFragment")
 
               else -> {
 
@@ -46,8 +46,20 @@ class Dashboard : AppCompatActivity() {
           }
             true
         }
+        // Periksa apakah ada fragment yang perlu di-load dari Intent
+        val fragmentToLoad = intent.getStringExtra("fragmentToLoad")
+        if (fragmentToLoad != null) {
+            when (fragmentToLoad) {
+                "PesananFragment" -> {
+                    replaceFragment(PesananFragment(), "PesananFragment")
+                    // Aktifkan menu Pesanan di Bottom Navigation
+                    binding.nav.selectedItemId = R.id.BtnPesanan
+                }
+                // Tambahkan case lain jika diperlukan
+            }
+        }
     }
-    private fun replaceFragment(fragment: Fragment){
+    private fun replaceFragment(fragment: Fragment, tag: String){
         val fragmentManager = supportFragmentManager
         val fragmentTransition = fragmentManager.beginTransaction()
         fragmentTransition.replace(R.id.frame_layout,fragment)

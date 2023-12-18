@@ -20,6 +20,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:background="@drawable/bgbottom"
         app:menu="@menu/bottom_nav"
+        android:paddingTop="10dp"
         app:itemIconTint="@color/color_bottom_nav"
         app:itemTextColor="@color/color_bottom_nav"
         app:elevation="10dp">

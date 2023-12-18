@@ -18,7 +18,9 @@ class BerhasilActivity : AppCompatActivity() {
 
         val BtnPesanan = findViewById<LinearLayout>(R.id.BtnPesanan)
         BtnPesanan.setOnClickListener {
-            startActivity(Intent(this, Dashboard::class.java))
+            val dashboardActivity = Intent(this, Dashboard::class.java)
+            dashboardActivity.putExtra("fragmentToLoad", "PesananFragment")
+            startActivity(dashboardActivity)
         }
     }
 }
