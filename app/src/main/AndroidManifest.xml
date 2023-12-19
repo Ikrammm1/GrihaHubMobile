@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.project.grihahub">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/logo"
@@ -9,8 +12,6 @@
         android:roundIcon="@drawable/logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Adapter.AdapterTambahan"></activity>
-        <activity android:name=".Ui.Layanan.CuciKasurActivity" />
         <activity android:name=".Ui.CustomDialog" />
         <activity android:name=".Ui.Pembayaran.BerhasilActivity" />
         <activity android:name=".Ui.Pembayaran.PembayaranActivity" />
