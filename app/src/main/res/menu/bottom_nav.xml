@@ -6,15 +6,20 @@
         android:id="@+id/BtnBeranda"
         android:title="Beranda"
         app:cnb_iconColor="@color/Kuning"
+        android:paddingTop="8dp"
         android:icon="@drawable/home"/>
     <item
         android:id="@+id/BtnPesanan"
         android:title="Pesanan"
+        android:paddingTop="10dp"
+
         app:cnb_iconColor="@color/Kuning"
         android:icon="@drawable/pesanan"/>
     <item
         android:id="@+id/BtnProfile"
         android:title="Profile"
+        android:paddingTop="8dp"
+
         app:cnb_iconColor="@color/Kuning"
         android:icon="@drawable/user"/>
 
